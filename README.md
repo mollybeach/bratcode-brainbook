@@ -136,18 +136,17 @@
 </div>
 ```
 
-#✨ Effects
+### ✨ Effects
 
-`blur-sm | blur-md | blur-lg | blur-xl | blur-2xl | blur-3xl` → Blur  
-`drop-shadow-sm | drop-shadow-md | drop-shadow-lg | drop-shadow-xl | drop-shadow-2xl | drop-shadow-3xl` → Drop shadow  
-`grayscale | invert | sepia | saturate | contrast | brightness | hue-rotate | drop-shadow` → Filter  
-`backdrop-blur-sm | backdrop-blur-md | backdrop-blur-lg | backdrop-blur-xl | backdrop-blur-2xl | backdrop-blur-3xl` → Backdrop blur  
-`backdrop-brightness-50 | backdrop-brightness-75 | backdrop-brightness-90 | backdrop-brightness-100 | backdrop-brightness-110 | backdrop-brightness-125 | backdrop-brightness-150 | backdrop-brightness-200` → Backdrop brightness  
-`backdrop-contrast-50 | backdrop-contrast-75` → Backdrop contrast  
-`backdrop-filter | backdrop-blur | backdrop-brightness | backdrop-drop-shadow | backdrop-grayscale | backdrop-hue-rotate | backdrop-invert | backdrop-opacity | backdrop-saturate | backdrop-sepia` → Backdrop filter
-
-`hover:blur-sm | hover:blur-md | hover:blur-lg | hover:blur-xl | hover:blur-2xl | hover:blur-3xl` → Hover blur
-`transition-shadow | transition-transform | transition-opacity duration-300` → Transition shadow
+- **Blur**: `blur-sm | blur-lg | blur-3xl`
+- **Drop Shadow**: `drop-shadow-md | drop-shadow-xl`
+- **Filter**: `grayscale | invert | brightness`
+- **Backdrop Effects**: 
+  - **Blur**: `backdrop-blur-md | backdrop-blur-3xl`
+  - **Brightness**: `backdrop-brightness-50 | backdrop-brightness-200`
+  - **Contrast**: `backdrop-contrast-50`
+- **Hover Effects**: `hover:blur-md | hover:blur-xl`
+- **Transition**: `transition-shadow | transition-opacity`
 
 ```html
 <div class="shadow-lg hover:shadow-xl transition-shadow duration-300 p-4 bg-gray-100">
