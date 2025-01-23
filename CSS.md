@@ -6,17 +6,9 @@
 - **Border Color**: `border-color: red; | blue; | green;`
 
 ```html
-<div class="color-example">
+<div style="color: white; background-color: blue; border: 2px solid red;">
   Color Example
 </div>
-```
-
-```css
-.color-example {
-  color: white;
-  background-color: blue;
-  border: 2px solid red;
-}
 ```
 
 ### ✏️ Borders
@@ -25,7 +17,7 @@
 - **Border Radius**: `border-radius: 0; | 5px; | 10px; | 50%;`
 
 ```html
-<div class="border-example">
+<div style="border: 2px solid black; border-radius: 10px; padding: 10px;">
   Border Example
 </div>
 ```
@@ -150,47 +142,5 @@
   right: 0;
   background-color: yellow;
   padding: 10px;
-}
-```
-
-### 🎨 Shadows
-- **Box Shadow**: `box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);`
-
-```html
-<div class="shadow-example">
-  Shadow Example
-</div>
-```
-
-```css
-.shadow-example {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  background-color: white;
-}
-```
-
-### ⚙️ Visibility
-- **Visibility**: `visibility: visible; | hidden;`
-- **Display**: `display: block; | none;`
-
-```html
-<div class="visibility-example">
-  This is visible
-</div>
-<div class="hidden-example">
-  This is hidden
-</div>
-```
-
-```css
-.visibility-example {
-  visibility: visible;
-  background-color: lightgray;
-  padding: 10px;
-}
-
-.hidden-example {
-  display: none;
 }
 ```
