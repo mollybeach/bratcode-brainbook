@@ -84,12 +84,12 @@ button {
 
 ### 🔍 Explanation:
 - Sets a background color and font styles for the entire page.
-- Uses element selector (p {}) to style all <p> elements in the document, adjusting font size, color, and line spacing.
+- Uses element selector (p {}) to style all < p > elements in the document, adjusting font size, color, and line spacing.
 - Styles the button with padding, colors, and a hover effect.
 - Uses inline styles for quick styling within the HTML file.
 - Uses element selector (button) to style all buttons by default.
 - Uses a class selector (.styled-button) to style a specific button differently.
-- Adds a .main-heading class to style <h1> elements separately.
+- Adds a .main-heading class to style < h1 > elements separately.
 
 ## 🛠️ 3. JavaScript File (script.js)
 
