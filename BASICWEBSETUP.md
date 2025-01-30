@@ -20,14 +20,16 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
     <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS file -->
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
+    <h1 class="main-heading" style="color: green;">Welcome to My Website</h1> <!-- Inline style example -->
     <p>This is a simple HTML, CSS, and JavaScript example.</p>
-    <button onclick="changeText()">Click Me</button> <!-- Calls JavaScript function -->
+    <button style="background-color: red; color: white;">Styled Button</button> <!-- Inline style example -->
+    <button class="styled-button" onclick="changeText()">Click Me</button> <!-- Calls JavaScript function & styled via class -->
     <p id="message"></p>
     
     <script src="script.js"></script> <!-- Linking external JavaScript file -->
 </body>
 </html>
+
 ```
 ### 🔍 Explanation:
 
