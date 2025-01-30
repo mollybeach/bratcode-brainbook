@@ -3,9 +3,18 @@
 
 This guide covers the structure of a basic web setup using HTML, CSS, and JavaScript. Below, you'll find explanations and the paths of the files to show how they are used together.
 
+## 📂 Project Directory Structure
+
+```
+myproject/
+│── index.html     # Main HTML file
+│── styles.css     # CSS for styling
+└── script.js      # JavaScript for interactivity
+```
+
 ## 🏗️ 1. HTML File (index.html)
 
-### Path: index.html
+### Path: ./index.html
 
 The HTML file is the backbone of the webpage. It provides the structure and references external files such as CSS and JavaScript.
 
@@ -42,7 +51,7 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
 
 ## 🎨 2. CSS File (styles.css)
 
-### Path: styles.css
+### Path: ./styles.css
 
 The CSS file is used to style the webpage and improve its appearance.
 
@@ -98,7 +107,7 @@ button {
 The JavaScript file adds interactivity to the webpage.
 
 ```
-// script.js
+// ./script.js
 function changeText() {
     document.getElementById("message").innerText = "You clicked the button!";
 }
