@@ -1,5 +1,9 @@
 # HTML Study Guide
 
+## 📖 Definition of HTML
+
+HTML (HyperText Markup Language) is the standard language used to create and structure webpages. It provides the foundational elements that define a webpage’s content, layout, and structure. HTML uses a system of tags to mark up text, images, links, and other elements for web browsers to interpret and 
+
 ### 📄 Document Structure
 - **Doctype**: `<!DOCTYPE html>`
 - **HTML Element**: `<html lang="en">`
