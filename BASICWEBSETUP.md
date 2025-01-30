@@ -3,9 +3,9 @@
 
 This guide covers the structure of a basic web setup using HTML, CSS, and JavaScript. Below, you'll find explanations and the paths of the files to show how they are used together.
 
-🏗️ 1. HTML File (index.html)
+## 🏗️ 1. HTML File (index.html)
 
-Path: index.html
+### Path: index.html
 
 The HTML file is the backbone of the webpage. It provides the structure and references external files such as CSS and JavaScript.
 
@@ -29,17 +29,15 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
 </body>
 </html>
 ```
-🔍 Explanation:
+### 🔍 Explanation:
 
-Links styles.css for styling the webpage.
+- Links styles.css for styling the webpage.
+- Contains a button that triggers a JavaScript function from script.js.
+- Uses a <script> tag at the bottom to include script.js.
 
-Contains a button that triggers a JavaScript function from script.js.
+## 🎨 2. CSS File (styles.css)
 
-Uses a <script> tag at the bottom to include script.js.
-
-🎨 2. CSS File (styles.css)
-
-Path: styles.css
+### Path: styles.css
 
 The CSS file is used to style the webpage and improve its appearance.
 
@@ -63,16 +61,14 @@ button {
 button:hover {
     background-color: darkblue;
 }
+```
+### 🔍 Explanation:
+- Sets a background color and font styles for the entire page.
+- Styles the button with padding, colors, and a hover effect.
 
-🔍 Explanation:
+## 🛠️ 3. JavaScript File (script.js)
 
-Sets a background color and font styles for the entire page.
-
-Styles the button with padding, colors, and a hover effect.
-
-🛠️ 3. JavaScript File (script.js)
-
-Path: script.js
+### Path: script.js
 
 The JavaScript file adds interactivity to the webpage.
 
@@ -81,7 +77,7 @@ function changeText() {
     document.getElementById("message").innerText = "You clicked the button!";
 }
 
-🔍 Explanation:
+### 🔍 Explanation:
 
 Defines a function changeText() that modifies the text inside the <p> element with id="message" when the button is clicked.
 
@@ -94,12 +90,10 @@ function changeText() {
 }
 ```
 
-📌 Summary
+## 📌 Summary
 
-index.html – The structure of the webpage, linking to CSS and JavaScript files.
-
-styles.css – Styles the webpage, improving its visual presentation.
-
-script.js – Adds interactivity, making the webpage dynamic.
+- index.html – The structure of the webpage, linking to CSS and JavaScript files.
+- styles.css – Styles the webpage, improving its visual presentation.
+- script.js – Adds interactivity, making the webpage dynamic.
 
 Together, these files form a basic web setup that allows for styling and interactive functionality. 🚀
