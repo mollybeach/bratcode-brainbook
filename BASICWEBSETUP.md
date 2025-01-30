@@ -83,9 +83,9 @@ function changeText() {
 
 Defines a function changeText() that modifies the text inside the <p> element with id="message" when the button is clicked.
 
-This function is triggered via the onclick event on the button.
+This function is triggered via the onclick event on the button in the HTML: 
 
-``html
+```html
  <button onclick="changeText()">Click Me</button> <!-- Calls JavaScript function -->
 ```
 
