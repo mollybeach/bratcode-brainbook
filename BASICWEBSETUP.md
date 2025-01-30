@@ -10,7 +10,7 @@ This guide covers the structure of a basic web setup using HTML, CSS, and JavaSc
 The HTML file is the backbone of the webpage. It provides the structure and references external files such as CSS and JavaScript.
 
 ``` html
-<!-- index.html -->
+<!-- index.html --> <-- This is how you make a comment in HTML using the arrows --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
 </head>
 <body>
     <h1 class="main-heading" style="color: green;">Welcome to My Website</h1> <!-- Inline style example -->
-    <p>This is a simple HTML, CSS, and JavaScript example.</p>
+    <p>This is a simple HTML, CSS, and JavaScript example.</p> <!-- Styled using a CSS element selector p {} in CSS -->
     <button style="background-color: red; color: white;">Styled Button</button> <!-- Inline style example -->
     <button class="styled-button" onclick="changeText()">Click Me</button> <!-- Calls JavaScript function & styled via class -->
     <p id="message"></p>
@@ -29,11 +29,14 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
     <script src="script.js"></script> <!-- Linking external JavaScript file -->
 </body>
 </html>
-
 ```
+
 ### 🔍 Explanation:
 
 - Links styles.css for styling the webpage.
+- Uses an inline style inside the <h1> tag and one of the <button> elements.
+- The second button references a CSS class (.styled-button) for styling.
+- The <p> element is styled using a CSS element selector (p {}).
 - Contains a button that triggers a JavaScript function from script.js.
 - Uses a <script> tag at the bottom to include script.js.
 
@@ -44,29 +47,49 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
 The CSS file is used to style the webpage and improve its appearance.
 
 ```css
-/* styles.css */
+/* path: styles.css */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
 }
 
+p {
+    font-size: 18px;
+    color: darkgray;
+    line-height: 1.5;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: blue;
-    color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
+.styled-button {
+    background-color: blue;
+    color: white;
+}
+
+.styled-button:hover {
     background-color: darkblue;
 }
+
+.main-heading {
+    font-size: 24px;
+    font-weight: bold;
+}
 ```
+
 ### 🔍 Explanation:
 - Sets a background color and font styles for the entire page.
+- Uses element selector (p {}) to style all <p> elements in the document, adjusting font size, color, and line spacing.
 - Styles the button with padding, colors, and a hover effect.
+- Uses inline styles for quick styling within the HTML file.
+- Uses element selector (button) to style all buttons by default.
+- Uses a class selector (.styled-button) to style a specific button differently.
+- Adds a .main-heading class to style <h1> elements separately.
 
 ## 🛠️ 3. JavaScript File (script.js)
 
