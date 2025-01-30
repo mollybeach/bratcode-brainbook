@@ -1,5 +1,9 @@
 # CSS Study Sheet
 
+## 📖 Definition of CSS
+
+CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of HTML elements on a webpage. It allows developers to define styles such as colors, fonts, spacing, positioning, and responsiveness. CSS enables the separation of content and design, making it easier to maintain and update web pages efficiently.
+
 ### 🎨 Colors
 - **Color**: `color: red; | blue; | green;`
 - **Background Color**: `background-color: red; | blue; | green;`
