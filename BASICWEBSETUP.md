@@ -72,10 +72,12 @@ button:hover {
 
 The JavaScript file adds interactivity to the webpage.
 
+```
 // script.js
 function changeText() {
     document.getElementById("message").innerText = "You clicked the button!";
 }
+```
 
 ### 🔍 Explanation:
 
@@ -83,11 +85,8 @@ Defines a function changeText() that modifies the text inside the <p> element wi
 
 This function is triggered via the onclick event on the button.
 
-``javascript
-// script.js
-function changeText() {
-    document.getElementById("message").innerText = "You clicked the button!";
-}
+``html
+ <button onclick="changeText()">Click Me</button> <!-- Calls JavaScript function -->
 ```
 
 ## 📌 Summary
