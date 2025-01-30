@@ -34,11 +34,11 @@ The HTML file is the backbone of the webpage. It provides the structure and refe
 ### 🔍 Explanation:
 
 - Links styles.css for styling the webpage.
-- Uses an inline style inside the <h1> tag and one of the <button> elements.
+- Uses an inline style inside the < h1 > tag and one of the < button > elements.
 - The second button references a CSS class (.styled-button) for styling.
-- The <p> element is styled using a CSS element selector (p {}).
+- The < p > element is styled using a CSS element selector (p {}).
 - Contains a button that triggers a JavaScript function from script.js.
-- Uses a <script> tag at the bottom to include script.js.
+- Uses a < script > tag at the bottom to include script.js.
 
 ## 🎨 2. CSS File (styles.css)
 
