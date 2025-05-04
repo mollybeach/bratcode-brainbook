@@ -2,9 +2,6 @@
 
 ---
 
-![Ownership, Borrowing, and Lifetimes](sandbox:/mnt/data/A_2D_diagram_titled_"Ownership,_Borrowing,_and_Lif.png)
-
----
 
 ## 🧱 What is Jupyter Notebook?
 
