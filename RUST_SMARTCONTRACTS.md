@@ -32,42 +32,46 @@ This guide focuses on Solana and CosmWasm.
 ```toml
 # Cargo.toml
 [dependencies]
-anchor-lang = "0.29.0"
+anchor-lang = "0.29.0"  # Anchor framework for Solana smart contracts
 ```
 
-### 🧱 Example Contract
+### 🧱 Example Contract (with Comments)
 
 ```rust
-use anchor_lang::prelude::*;
+use anchor_lang::prelude::*; // Import commonly used Anchor types and macros
 
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkgXX5YexT9W5");
+// `declare_id!` macro defines the program ID used for deployment
 
-#[program]
+#[program] // Marks the beginning of contract logic block
 pub mod my_contract {
-    use super::*;
+    use super::*; // Bring everything from outer scope (common Rust idiom)
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        msg!("Hello from Solana smart contract!");
-        Ok(())
+        // Entry function `initialize`, takes Context with required accounts
+        msg!("Hello from Solana smart contract!"); // Macro for logging to Solana runtime
+        Ok(()) // Return success wrapped in Result
     }
 }
 
-#[derive(Accounts)]
-pub struct Initialize {}
+#[derive(Accounts)] // Derives a trait to deserialize input accounts
+pub struct Initialize {} // Empty struct (no accounts needed in this example)
 ```
 
-### 💡 Notes
+### 🔤 Symbol Notes
 
-* `#[program]`: Defines entry points
-* `Context<...>`: Specifies required accounts
-* `msg!`: Logging macro (similar to `println!`, outputs to Solana logs)
+* `::`: path separator (like `.` in Python or `/` in JS module systems)
+* `!`: indicates macro invocation (from Rust's macro system, inspired by Lisp and C macros)
+* `#[...]`: attributes or annotations used for code generation and metadata
+* `use`: similar to `import` in JS or Python
+* `super::*`: means "everything from the parent module"
 
 ### 🚀 Deploy & Test
 
 ```bash
-anchor build
-anchor deploy
-anchor test
+anchor build    # Compile the program to BPF bytecode
+anchor deploy   # Deploy to localnet or devnet
+anchor test     # Run unit and integration tests
 ```
 
 ---
@@ -79,46 +83,49 @@ anchor test
 ```toml
 # Cargo.toml
 [dependencies]
-cosmwasm-std = "1.4.0"
-cosmwasm-schema = "1.4.0"
+cosmwasm-std = "1.4.0"        # Core Cosmos standard library
+cosmwasm-schema = "1.4.0"     # Schema generation utilities
 ```
 
-### 🧱 Example Increment Contract
+### 🧱 Example Increment Contract (with Comments)
 
 ```rust
 use cosmwasm_std::{DepsMut, Env, MessageInfo, Response, StdResult};
+// Import Cosmos types: dependencies, environment, message info, response format
 
-use crate::state::{STATE, State};
+use crate::state::{STATE, State}; // Import defined contract state
 
 pub fn try_increment(deps: DepsMut, _env: Env, _info: MessageInfo) -> StdResult<Response> {
+    // Entry point to update state (increments counter)
     STATE.update(deps.storage, |mut state| -> StdResult<_> {
-        state.count += 1;
+        state.count += 1; // Modify on-chain state
         Ok(state)
-    })?;
+    })?; // `?` unwraps or returns error — Rust error handling idiom
 
-    Ok(Response::default())
+    Ok(Response::default()) // Return default response to chain
 }
 ```
 
 ### 📦 State Example
 
 ```rust
-use schemars::JsonSchema;
-use serde::{Deserialize, Serialize};
+use schemars::JsonSchema; // For JSON schema generation (for frontend devs)
+use serde::{Deserialize, Serialize}; // Derives for serializing state to/from storage
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
 pub struct State {
-    pub count: i32,
+    pub count: i32, // Integer count, part of contract's persistent state
 }
 
 pub const STATE: Item<State> = Item::new("state");
+// `Item` is a wrapper for reading/writing a value with a unique storage key
 ```
 
 ### 🚀 Compile & Deploy
 
 ```bash
-cargo wasm
-wasmd tx wasm store target/wasm32-unknown-unknown/release/contract.wasm ...
+cargo wasm                             # Build WASM binary
+wasmd tx wasm store contract.wasm ...  # Store and deploy contract to Cosmos chain
 ```
 
 ---
@@ -139,16 +146,17 @@ wasmd tx wasm store target/wasm32-unknown-unknown/release/contract.wasm ...
 
 ### ✅ Ownership & Lifetimes
 
-Rust’s ownership model ensures memory safety and prevents race conditions — critical in smart contract logic.
+Rust’s compiler enforces ownership and borrowing rules. This prevents memory leaks, race conditions, and null pointer errors at compile-time — perfect for untrusted blockchain environments.
 
 ### 🧩 Serialization
 
-* **Anchor** uses Borsh
-* **CosmWasm** uses Serde
+* Anchor: **Borsh** — Binary Object Representation Serializer for Hashing (from NEAR)
+* CosmWasm: **Serde** — Popular Rust framework for JSON/XML/CBOR, widely used in the Rust ecosystem
 
 ### 🧪 Testing
 
-Write tests in `tests/` directory (Anchor) or `lib.rs` using `#[cfg(test)]`.
+* Anchor tests live in `/tests/` directory and use Mocha-style JS wrappers or Rust tests with `#[cfg(test)]`
+* CosmWasm uses `#[cfg(test)]` modules within Rust files
 
 ---
 
@@ -157,7 +165,8 @@ Write tests in `tests/` directory (Anchor) or `lib.rs` using `#[cfg(test)]`.
 * [Solana Anchor Book](https://book.anchor-lang.com/)
 * [CosmWasm Docs](https://docs.cosmwasm.com/)
 * [Rust Book](https://doc.rust-lang.org/book/)
+* [Serde Docs](https://serde.rs/)
 
 ---
 
-Let me know if you'd like a visual diagram of the contract lifecycle or account struct
+Let me know if you'd like a diagram of state transitions, lifetime scopes, or Solana account models!
