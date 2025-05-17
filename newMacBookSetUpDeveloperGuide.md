@@ -117,53 +117,6 @@ Hi your-username! You've successfully authenticated, but GitHub does not provide
 
 That means your SSH key is set up correctly! 🔑
 
-
-## ✅ 4. GitHub SSH Key Setup (macOS): 
-
-The Following One Line Command Will
-- Generates a new SSH key pair using the Ed25519 algorithm Tags it with your email
--  Start the SSH agent
-- Configure SSH Settings
-- Add the private key to masOS keychain 
-
-### 🚀 Run this in Terminal:
-```bash
-# Replace with your GitHub email address
-ssh-keygen -t ed25519 -C "youremail@example.com" && \
-eval "$(ssh-agent -s)" && \
-echo "Host *" >> ~/.ssh/config && \
-echo "  AddKeysToAgent yes" >> ~/.ssh/config && \
-echo "  UseKeychain yes" >> ~/.ssh/config && \
-echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
-
-### 📋 Copy your public key to the clipboard:
-```
-pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-> 💡 After running this, paste the copied SSH key into [GitHub SSH Settings](https://github.com/settings/ssh/new)
-
-Paste the copied key into [GitHub SSH Settings](https://github.com/settings/ssh/new) 
-
-## Example of New SSH Key Settings 
-
-**Title** can be any thing example: SSH_KEY_MOLLY_M4_MACBOOK_BOOK
-**Key Type Dropdown** Authentication Key
-**Key Example** ssh-ed25519 AAAABBBBCCCCDDDD1111222233334444EEEEFFFFGGGGHHHH0000 youremail@example.com
-
-> 💡 **Note:** Leave the key exactly as-is — including the `ssh-ed25519` prefix and the email at the end (e.g., `example@example.com`).  
-> When pasting into GitHub’s **New SSH Key** field, make sure the entire line is copied without changes.
-
-
-After Saving your new Key in Github Settings
-# Run this command in Terminal to check if Configured properly 
-
-```bash
-ssh -T git@github.com
-```
-
 ---
 
 ## ✅ 5. Go
