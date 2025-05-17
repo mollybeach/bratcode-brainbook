@@ -122,10 +122,10 @@ Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
 Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+✅ Then, if everything is set up correctly, you should see:
 
-You should see:
 ```
-Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
+Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 That means your SSH key is set up correctly! 🔑
