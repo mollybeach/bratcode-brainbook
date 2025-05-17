@@ -72,8 +72,6 @@ This command will:
 - 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
 - 🧠  Make sure to KEEP the double quotes around the email — they are required
 ```bash
-# 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
-# 🧠 Make sure to KEEP the double quotes around the email — they are required
 ssh-keygen -t ed25519 -C "youremail@example.com" && \
 eval "$(ssh-agent -s)" && \
 echo "Host *" >> ~/.ssh/config && \
