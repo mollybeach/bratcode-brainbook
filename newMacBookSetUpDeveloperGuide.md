@@ -63,7 +63,7 @@ The Following One Line Command Will
 - Configure SSH Settings
 - Add the private key to masOS keychain 
 
-### Copy into Terminal: 
+### Run in Terminal: 
 ```bash
 # Replace with your GitHub email address
 ssh-keygen -t ed25519 -C "youremail@example.com" && \
