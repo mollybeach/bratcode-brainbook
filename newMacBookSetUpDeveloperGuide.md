@@ -173,8 +173,6 @@ Let me know if you’d like to include `GOPATH`, `GOROOT`, or a workspace setup 
 
 ## ✅ 6. Rust
 
-## ✅ 6. Rust
-
 Install Rust using the official `rustup` installer:
 
 ```bash
@@ -216,11 +214,6 @@ cargo --version
 rustup component add clippy rustfmt rust-analyzer
 brew install wasm-pack
 ```
-
----
-
-Let me know if you want to include a `cargo install` section for common tools like `cargo-watch`, `cargo-edit`, or `wasm-bindgen-cli`.
-
 
 ---
 
