@@ -218,30 +218,73 @@ rustup component add clippy rustfmt rust-analyzer
 brew install wasm-pack
 ```
 
----
-
 ## ✅ 7. Python
 
-If `pip3` is available but `pip` is not:
+Install Python via Homebrew (recommended for macOS):
+
+```bash
+brew install python
+```
+
+This will install the latest version of `python3` and `pip3`.
+
+---
+
+### ⚙️ Fix `pip` command (optional)
+
+Sometimes `pip3` is available, but `pip` is not. To make `pip` globally accessible:
 
 ```bash
 sudo ln -s $(which pip3) /opt/homebrew/bin/pip
 ```
 
-To enable installation in the Homebrew Python environment:
+---
+
+### 📦 Installing dependencies (without breaking macOS system Python)
+
+Use the `--break-system-packages` flag to allow pip installations in your Homebrew-managed Python environment:
 
 ```bash
 pip3 install --break-system-packages -r requirements.txt
 ```
 
-Make it persistent:
+Or if you're using `pip` after linking:
+
+```bash
+pip install --break-system-packages -r requirements.txt
+```
+
+---
+
+### 🔁 Make `--break-system-packages` behavior persistent
+
+This ensures pip always allows installation into your user environment:
 
 ```bash
 mkdir -p ~/Library/Application\ Support/pip
 echo -e "[global]\nbreak-system-packages = true" >> ~/Library/Application\ Support/pip/pip.conf
 ```
 
+> 💡 This avoids issues where pip refuses to install packages due to macOS system protection.
+
 ---
+
+### ✅ Verify installation
+
+```bash
+python3 --version
+pip3 --version
+```
+
+You should see something like:
+
+```
+Python 3.12.2
+pip 23.3.1 from /opt/homebrew/lib/python3.12/site-packages/pip (python 3.12)
+```
+
+---
+
 
 ## ✅ 8. Blockchain / Web3 Tooling
 
