@@ -42,12 +42,16 @@ brew install --cask visual-studio-code iterm2 blender unity-hub
 
 ## ✅ 3. Git Configuration
 
+Set your global Git identity (this will be used for all Git commits):
+
 ```bash
 git config --global user.name "myGitHubUserName"
 git config --global user.email "myEmail@example.com"
 ```
 
-Use SSH instead of HTTPS by default:
+> 💡 **Important:** Keep the double quotes (`"`) around your name and email — they are required, especially if your name contains spaces or special characters.
+
+Configure Git to use SSH instead of HTTPS by default (recommended for authentication with GitHub):
 
 ```bash
 git config --global url."git@github.com:".insteadOf "https://github.com/"
@@ -65,8 +69,10 @@ This command will:
 - Add your private key to the macOS keychain
 
 ### 🚀 Run this in Terminal:
+
 ```bash
-# Replace with your GitHub email address
+# 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
+# 🧠 Make sure to KEEP the double quotes around the email — they are required
 ssh-keygen -t ed25519 -C "youremail@example.com" && \
 eval "$(ssh-agent -s)" && \
 echo "Host *" >> ~/.ssh/config && \
