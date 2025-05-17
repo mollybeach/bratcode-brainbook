@@ -167,10 +167,6 @@ go version
 
 ---
 
-Let me know if you’d like to include `GOPATH`, `GOROOT`, or a workspace setup section too!
-
----
-
 ## ✅ 6. Rust
 
 Install Rust using the official `rustup` installer:
@@ -180,7 +176,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 > ⏎ Press **Enter** to proceed with the default installation.  
-> If prompted with a warning about an existing Rust install, type `y` to continue.
+> If prompted with a warning about an existing Rust install, type **y** to continue.
 
 ---
 
@@ -191,6 +187,12 @@ echo 'source "$HOME/.cargo/env"' >> ~/.zprofile
 source ~/.zprofile
 ```
 
+> 🧠 **If `cargo` or `rustc` are still not found**, run this once in your terminal to load the environment:
+>
+> ```bash
+> . "$HOME/.cargo/env"
+> ```
+
 ---
 
 ### ✅ Verify Rust installation:
@@ -200,10 +202,11 @@ rustc --version
 cargo --version
 ```
 
-> 💡 You should see output like:
+> 💡 You should see something like:
+>
 > ```
-> rustc 1.77.2 (0ddd5e44a 2024-05-03)
-> cargo 1.77.2 (ad8c7bce 2024-05-03)
+> rustc 1.87.0 (17067e9ac 2025-05-09)
+> cargo 1.87.0 (b7ed5f0fa 2025-05-09)
 > ```
 
 ---
