@@ -75,6 +75,7 @@ echo "  UseKeychain yes" >> ~/.ssh/config && \
 echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
+> 🧑‍💻 **Note:** After running the command, you’ll be prompted a few times — just **keep pressing Enter** to accept the defaults and skip the optional passphrase.
 
 ### 📋 Copy your public key to the clipboard:
 ```bash
