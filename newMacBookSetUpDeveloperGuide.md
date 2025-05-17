@@ -111,6 +111,18 @@ After saving the key in GitHub, run:
 ssh -T git@github.com
 ```
 
+The first time you connect, you may see a warning like this:
+
+```
+The authenticity of host 'github.com (109.99.125.3)' can't be established.
+ED25519 key fingerprint is SHA256:XxYyZz123FakeFingerprintABCDEFghijkLmnoPQRSTuvwxYZ890=
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes    # ⏎ Type "yes" and press Enter
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+
 You should see:
 ```
 Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
