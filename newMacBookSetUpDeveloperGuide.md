@@ -69,7 +69,8 @@ This command will:
 - Add your private key to the macOS keychain
 
 ### 🚀 Run this in Terminal:
-
+- 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
+- 🧠  Make sure to KEEP the double quotes around the email — they are required
 ```bash
 # 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
 # 🧠 Make sure to KEEP the double quotes around the email — they are required
