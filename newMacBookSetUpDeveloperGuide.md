@@ -173,24 +173,54 @@ Let me know if you’d like to include `GOPATH`, `GOROOT`, or a workspace setup 
 
 ## ✅ 6. Rust
 
+## ✅ 6. Rust
+
+Install Rust using the official `rustup` installer:
+
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Add Cargo to your path:
+> ⏎ Press **Enter** to proceed with the default installation.  
+> If prompted with a warning about an existing Rust install, type `y` to continue.
+
+---
+
+### 🛠️ Add Cargo to your shell path:
 
 ```bash
-echo 'source $HOME/.cargo/env' >> ~/.zprofile
+echo 'source "$HOME/.cargo/env"' >> ~/.zprofile
 source ~/.zprofile
+```
+
+---
+
+### ✅ Verify Rust installation:
+
+```bash
+rustc --version
 cargo --version
 ```
 
-Install useful Rust tools:
+> 💡 You should see output like:
+> ```
+> rustc 1.77.2 (0ddd5e44a 2024-05-03)
+> cargo 1.77.2 (ad8c7bce 2024-05-03)
+> ```
+
+---
+
+### 📦 Install useful Rust tooling:
 
 ```bash
 rustup component add clippy rustfmt rust-analyzer
 brew install wasm-pack
 ```
+
+---
+
+Let me know if you want to include a `cargo install` section for common tools like `cargo-watch`, `cargo-edit`, or `wasm-bindgen-cli`.
+
 
 ---
 
