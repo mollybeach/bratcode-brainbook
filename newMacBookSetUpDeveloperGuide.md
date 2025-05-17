@@ -139,17 +139,35 @@ That means your SSH key is set up correctly! 🔑
 
 ## ✅ 5. Go
 
+Install Go using Homebrew:
+
 ```bash
 brew install go
 ```
 
-Add Go to your path:
+Add Go and Homebrew to your shell path by updating `.zprofile`:
 
 ```bash
+# Add Homebrew environment setup (if not already present)
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add Go's binary path
 echo 'export PATH="/opt/homebrew/opt/go/libexec/bin:$PATH"' >> ~/.zprofile
 source ~/.zprofile
+```
+
+Verify the installation:
+
+```bash
 go version
 ```
+
+> 💡 You should see something like: `go version go1.24.3 darwin/arm64`
+
+---
+
+Let me know if you’d like to include `GOPATH`, `GOROOT`, or a workspace setup section too!
 
 ---
 
