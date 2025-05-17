@@ -55,15 +55,16 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 
 ---
 
-## ✅ 4. GitHub SSH Key Setup (macOS): 
+## ✅ 4. GitHub SSH Key Setup (macOS)
 
-The Following One Line Command Will
-- Generates a new SSH key pair using the Ed25519 algorithm Tags it with your email
--  Start the SSH agent
-- Configure SSH Settings
-- Add the private key to masOS keychain 
+This command will:
 
-### Run in Terminal: 
+- Generate a new SSH key pair using the Ed25519 algorithm and tag it with your email
+- Start the SSH agent in the background
+- Configure your SSH settings in `~/.ssh/config`
+- Add your private key to the macOS keychain
+
+### 🚀 Run this in Terminal:
 ```bash
 # Replace with your GitHub email address
 ssh-keygen -t ed25519 -C "youremail@example.com" && \
@@ -75,32 +76,78 @@ echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
-### Now Copy the new public key to clipboard with this command: 
+### 📋 Copy your public key to the clipboard:
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+> 💡 After copying, paste the key into [GitHub SSH Settings](https://github.com/settings/ssh/new)
+
+---
+
+## 🔐 Adding the SSH Key to GitHub
+
+When adding a **New SSH Key** in GitHub:
+
+- **Title**: Anything you want — this is just for your own reference.  
+  Example: `SSH_KEY_Molly_MacBook_M4`
+- **Key type**: Leave as the default (`Authentication Key`)
+- **Key example**:
+  ```
+  ssh-ed25519 AAAABBBBCCCCDDDD1111222233334444EEEEFFFFGGGGHHHH0000 youremail@example.com
+  ```
+
+> 💡 **Important:** Paste the entire key exactly as it appears — including the `ssh-ed25519` prefix and your email at the end.  
+> Don’t add line breaks, extra spaces, or quotation marks.
+
+---
+
+### ✅ Test your SSH connection to GitHub
+
+After saving the key in GitHub, run:
+
+```bash
+ssh -T git@github.com
+```
+
+You should see:
+```
+Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+That means your SSH key is set up correctly! 🔑
+
+
+## ✅ 4. GitHub SSH Key Setup (macOS): 
+
+The Following One Line Command Will
+- Generates a new SSH key pair using the Ed25519 algorithm Tags it with your email
+-  Start the SSH agent
+- Configure SSH Settings
+- Add the private key to masOS keychain 
+
+### 🚀 Run this in Terminal:
+```bash
+# Replace with your GitHub email address
+ssh-keygen -t ed25519 -C "youremail@example.com" && \
+eval "$(ssh-agent -s)" && \
+echo "Host *" >> ~/.ssh/config && \
+echo "  AddKeysToAgent yes" >> ~/.ssh/config && \
+echo "  UseKeychain yes" >> ~/.ssh/config && \
+echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+### 📋 Copy your public key to the clipboard:
 ```
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 > 💡 After running this, paste the copied SSH key into [GitHub SSH Settings](https://github.com/settings/ssh/new)
 
-```bash
-ssh-keygen -t ed25519 -C "myEmail@example.com"
-eval "$(ssh-agent -s)"
-
-echo "Host *" >> ~/.ssh/config
-echo "  AddKeysToAgent yes" >> ~/.ssh/config
-echo "  UseKeychain yes" >> ~/.ssh/config
-echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
-
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
-
-### Run command to copy ssh key to clipboard
-
-```
-pbcopy < ~/.ssh/id_ed25519.pub
-```
-
 Paste the copied key into [GitHub SSH Settings](https://github.com/settings/ssh/new) 
+
+## Example of New SSH Key Settings 
 
 **Title** can be any thing example: SSH_KEY_MOLLY_M4_MACBOOK_BOOK
 **Key Type Dropdown** Authentication Key
