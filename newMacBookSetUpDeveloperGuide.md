@@ -119,7 +119,6 @@ ED25519 key fingerprint is SHA256:XxYyZz123FakeFingerprintABCDEFghijkLmnoPQRSTuv
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes    # ⏎ Type "yes" and press Enter
 Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
-Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 ✅ Then, if everything is set up correctly, you should see:
