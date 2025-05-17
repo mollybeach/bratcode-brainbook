@@ -75,7 +75,7 @@ echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
-# Now Copy the new public key to clipboard with this command: 
+### Now Copy the new public key to clipboard with this command: 
 ```
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
