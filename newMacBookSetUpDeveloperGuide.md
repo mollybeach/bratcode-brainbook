@@ -232,7 +232,7 @@ This will install the latest version of `python3` and `pip3`.
 
 ### ⚙️ Fix `pip` command (optional)
 
-Sometimes `pip3` is available, but `pip` is not. To make `pip` globally accessible:
+Sometimes `pip3` is available, but `pip` is not. To create a `pip` alias globally:
 
 ```bash
 sudo ln -s $(which pip3) /opt/homebrew/bin/pip
@@ -240,15 +240,31 @@ sudo ln -s $(which pip3) /opt/homebrew/bin/pip
 
 ---
 
-### 📦 Installing dependencies (without breaking macOS system Python)
+### 🧪 ✅ Verify installation:
 
-Use the `--break-system-packages` flag to allow pip installations in your Homebrew-managed Python environment:
+```bash
+python3 --version
+pip3 --version
+```
+
+You should see something like:
+
+```
+Python 3.12.2
+pip 23.3.1 from /opt/homebrew/lib/python3.12/site-packages/pip (python 3.12)
+```
+
+---
+
+### 📦 Optional: Install project dependencies safely
+
+To install packages without affecting macOS system Python:
 
 ```bash
 pip3 install --break-system-packages -r requirements.txt
 ```
 
-Or if you're using `pip` after linking:
+If you’ve aliased `pip`, you can also use:
 
 ```bash
 pip install --break-system-packages -r requirements.txt
@@ -256,16 +272,16 @@ pip install --break-system-packages -r requirements.txt
 
 ---
 
-### 🔁 Make `--break-system-packages` behavior persistent
+### 🔁 Optional: Make `--break-system-packages` behavior persistent
 
-This ensures pip always allows installation into your user environment:
+This config ensures pip allows package installs without needing the flag each time:
 
 ```bash
 mkdir -p ~/Library/Application\ Support/pip
 echo -e "[global]\nbreak-system-packages = true" >> ~/Library/Application\ Support/pip/pip.conf
 ```
 
-> 💡 This avoids issues where pip refuses to install packages due to macOS system protection.
+> 💡 This is helpful if you install a lot of packages globally via `pip3` and want to avoid environment errors.
 
 ---
 
