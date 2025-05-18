@@ -285,22 +285,6 @@ echo -e "[global]\nbreak-system-packages = true" >> ~/Library/Application\ Suppo
 
 ---
 
-### ✅ Verify installation
-
-```bash
-python3 --version
-pip3 --version
-```
-
-You should see something like:
-
-```
-Python 3.12.2
-pip 23.3.1 from /opt/homebrew/lib/python3.12/site-packages/pip (python 3.12)
-```
-
----
-
 
 ## ✅ 8. Blockchain / Web3 Tooling
 
