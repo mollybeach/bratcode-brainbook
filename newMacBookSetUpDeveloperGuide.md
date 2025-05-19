@@ -317,6 +317,7 @@ npm install -g hardhat truffle ganache
 brew tap foundry-rs/foundry && brew install foundry
 brew install solidity
 brew install aptos solana
+brew install ipfs
 ```
 
 ---
