@@ -30,7 +30,7 @@ brew --version
 ## ✅ 2. Core Tools
 
 ```bash
-brew install git node python scala java sbt r ruby
+brew install git node yarn python scala java sbt r ruby
 brew install postgresql mongodb redis
 brew install docker kubectl terraform
 brew install jq wget tree gh tmux fzf bat
