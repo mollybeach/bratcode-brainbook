@@ -35,7 +35,6 @@ brew install postgresql mongodb redis
 brew install docker kubectl terraform
 brew install jq wget tree gh tmux fzf bat
 brew install nvm pyenv pipx
-brew install --cask visual-studio-code iterm2 blender unity-hub
 ```
 
 ---
@@ -63,14 +62,16 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 
 This command will:
 
-- Generate a new SSH key pair using the Ed25519 algorithm and tag it with your email
-- Start the SSH agent in the background
-- Configure your SSH settings in `~/.ssh/config`
-- Add your private key to the macOS keychain
+* Generate a new SSH key pair using the Ed25519 algorithm and tag it with your email
+* Start the SSH agent in the background
+* Configure your SSH settings in `~/.ssh/config`
+* Add your private key to the macOS keychain
 
 ### 🚀 Run this in Terminal:
-- 🔁 IMPORTANT: Replace youremail@example.com with your actual GitHub email
-- 🧠  Make sure to KEEP the double quotes around the email — they are required
+
+* 🔁 IMPORTANT: Replace `youremail@example.com` with your actual GitHub email
+* 🧠  Make sure to KEEP the double quotes around the email — they are required
+
 ```bash
 ssh-keygen -t ed25519 -C "youremail@example.com" && \
 eval "$(ssh-agent -s)" && \
@@ -80,9 +81,11 @@ echo "  UseKeychain yes" >> ~/.ssh/config && \
 echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config && \
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
+
 > 🧑‍💻 **Note:** After running the command, you’ll be prompted a few times — just **keep pressing Enter** to accept the defaults and skip the optional passphrase.
 
 ### 📋 Copy your public key to the clipboard:
+
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
@@ -95,22 +98,21 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 When adding a **New SSH Key** in GitHub:
 
-- **Title**: Anything you want — this is just for your own reference.  
+* **Title**: Anything you want — this is just for your own reference
   Example: `SSH_KEY_Molly_MacBook_M4`
-- **Key type**: Leave as the default (`Authentication Key`)
-- **Key example**:
+* **Key type**: Leave as the default (`Authentication Key`)
+* **Key example**:
+
   ```
   ssh-ed25519 AAAABBBBCCCCDDDD1111222233334444EEEEFFFFGGGGHHHH0000 youremail@example.com
   ```
 
-> 💡 **Important:** Paste the entire key exactly as it appears — including the `ssh-ed25519` prefix and your email at the end.  
+> 💡 **Important:** Paste the entire key exactly as it appears — including the `ssh-ed25519` prefix and your email at the end.
 > Don’t add line breaks, extra spaces, or quotation marks.
 
 ---
 
 ### ✅ Test your SSH connection to GitHub
-
-After saving the key in GitHub, run:
 
 ```bash
 ssh -T git@github.com
@@ -126,7 +128,7 @@ This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes    # ⏎ Type "yes" and press Enter
 ```
 
-✅ Then, if everything is set up correctly, you should see:
+📅 Then, if everything is set up correctly, you should see:
 
 ```
 Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
@@ -175,7 +177,7 @@ Install Rust using the official `rustup` installer:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-> ⏎ Press **Enter** to proceed with the default installation.  
+> ⏎ Press **Enter** to proceed with the default installation.
 > If prompted with a warning about an existing Rust install, type **y** to continue.
 
 ---
@@ -218,6 +220,8 @@ rustup component add clippy rustfmt rust-analyzer
 brew install wasm-pack
 ```
 
+---
+
 ## ✅ 7. Python
 
 Install Python via Homebrew (recommended for macOS):
@@ -232,8 +236,6 @@ This will install the latest version of `python3` and `pip3`.
 
 ### ⚙️ Fix `pip` command (optional)
 
-Sometimes `pip3` is available, but `pip` is not. To create a `pip` alias globally:
-
 ```bash
 sudo ln -s $(which pip3) /opt/homebrew/bin/pip
 ```
@@ -247,7 +249,7 @@ python3 --version
 pip3 --version
 ```
 
-You should see something like:
+Expected output:
 
 ```
 Python 3.12.2
@@ -258,13 +260,11 @@ pip 23.3.1 from /opt/homebrew/lib/python3.12/site-packages/pip (python 3.12)
 
 ### 📦 Optional: Install project dependencies safely
 
-To install packages without affecting macOS system Python:
-
 ```bash
 pip3 install --break-system-packages -r requirements.txt
 ```
 
-If you’ve aliased `pip`, you can also use:
+Or:
 
 ```bash
 pip install --break-system-packages -r requirements.txt
@@ -272,21 +272,45 @@ pip install --break-system-packages -r requirements.txt
 
 ---
 
-### 🔁 Optional: Make `--break-system-packages` behavior persistent
-
-This config ensures pip allows package installs without needing the flag each time:
+### 🔄 Optional: Make `--break-system-packages` behavior persistent
 
 ```bash
 mkdir -p ~/Library/Application\ Support/pip
 echo -e "[global]\nbreak-system-packages = true" >> ~/Library/Application\ Support/pip/pip.conf
 ```
 
-> 💡 This is helpful if you install a lot of packages globally via `pip3` and want to avoid environment errors.
+---
+
+## 📂 ✅ 8. Launchpad Developer Apps
+
+Install GUI apps that show up in **Launchpad**:
+
+
+
+```bash
+### 💻 Install Full Xcode IDE rcommended for iOS/macOS dev
+brew install --cask xcode
+```
+
+```bash
+# Code Editors
+brew install --cask visual-studio-code cursor github
+
+# Infrastructure & Databases
+brew install --cask docker postgres-unofficial insomnia warp
+
+# Browsers (for web dev testing)
+brew install --cask google-chrome firefox arc
+
+# Design Tools
+brew install --cask figma kap
+```
+
+> 💡 Once installed, launch each app manually once to complete macOS permissions setup.
 
 ---
 
-
-## ✅ 8. Blockchain / Web3 Tooling
+## 🚀 ✅ 9. Blockchain / Web3 Tooling
 
 ```bash
 npm install -g hardhat truffle ganache
@@ -297,28 +321,17 @@ brew install aptos solana
 
 ---
 
-## ✅ 9. AWS Setup
-
-Install AWS CLI:
+## ☁️ ✅ 10. AWS Setup
 
 ```bash
 brew install awscli
 ```
 
-Configure your AWS credentials:
-
 ```bash
 aws configure
 ```
 
-You'll be prompted for:
-
-* AWS Access Key ID
-* AWS Secret Access Key
-* Default region (e.g. us-west-2)
-* Default output format (e.g. json)
-
-Verify it's working:
+Verify:
 
 ```bash
 aws sts get-caller-identity
@@ -326,56 +339,39 @@ aws sts get-caller-identity
 
 ---
 
-## ✅ 10. GCP SDK Setup
+## 🌍 ✅ 11. GCP SDK Setup
 
 ```bash
 brew install --cask google-cloud-sdk
 ```
 
-Initialize the CLI:
-
 ```bash
 gcloud init
-```
-
-Authenticate:
-
-```bash
 gcloud auth login
 ```
 
 ---
 
-## ✅ 11. Azure CLI Setup
+## 🔳 ✅ 12. Azure CLI Setup
 
 ```bash
 brew install azure-cli
-```
-
-Login to your Azure account:
-
-```bash
 az login
 ```
 
 ---
 
-## ✅ 12. Firebase CLI
+## 🌟 ✅ 13. Firebase CLI
 
 ```bash
 npm install -g firebase-tools
-```
-
-Login and initialize a project:
-
-```bash
 firebase login
 firebase init
 ```
 
 ---
 
-## ✅ 10. Sample Project Cloning (via SSH)
+## 📚 ✅ 14. Sample Project Cloning (via SSH)
 
 ```bash
 git clone git@github.com:myGitHubUserName/myProjectName.git
@@ -385,7 +381,7 @@ make install-deps
 
 ---
 
-## ✅ 11. Optional: VS Code Extensions
+## 📄 ✅ 15. Optional: VS Code Extensions
 
 * Rust Analyzer
 * ESLint + Prettier
