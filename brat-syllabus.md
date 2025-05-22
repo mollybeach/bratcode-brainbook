@@ -140,6 +140,3 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 Let’s get that tech bag, brat 💅💻🧃
 Questions? Hit up the Brat-Cademy Dean 😎
 
-Let’s get that tech bag, brat 💅💻🧃
-Questions? Hit up the Brat-Cademy Dean 😎
-
