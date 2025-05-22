@@ -72,7 +72,23 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 
 ---
 
-### 5. 🧾 Learn TypeScript
+### 5. 🧱 Ethereum Blockchain Developer Bootcamp With Solidity (2025)
+
+**Platform:** [Udemy – Solidity Bootcamp](https://www.udemy.com/course/blockchain-developer/learn/lecture/33861892)
+**Skill Level:** Beginner to Intermediate
+**Duration:** Estimated \~20 hours
+**Payout:** **💵 \$500 upon completion**
+
+#### What You’ll Learn:
+
+* Master Ethereum development using Solidity
+* Build and deploy smart contracts using **Remix**, **Truffle**, **MetaMask**, and **Web3.js**
+* Explore blockchain fundamentals and dApp interaction
+* Complete labs and real-world contract deployments
+
+---
+
+### 6. 🧾 Learn TypeScript
 
 **Platform:** [Codecademy – Learn TypeScript](https://www.codecademy.com/enrolled/courses/learn-typescript)
 **Skill Level:** Intermediate
@@ -85,10 +101,12 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 * Functions, complex types, union types, narrowing, and advanced object types
 * Build 7 practical projects including **Restaurant Recommender** and **TypeMart**
 * Earn a Certificate of Completion
+🌩️ Certification Path: AWS Certified Cloud Practitioner (CLF-C02)
+
 
 ---
 
-### 6. 🌩️ Certification Path: AWS Certified Cloud Practitioner (CLF-C02)
+ ### 7. 🌩️ Certification Path: AWS Certified Cloud Practitioner (CLF-C02)
 
 **Platform:** AWS (Certification Exam)
 **Skill Level:** Beginner
@@ -106,7 +124,7 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 
 ## 💰 Total Earning Potential
 
-**Complete all six and earn: 💸 \$6,275**
+**Complete all seven and earn: 💸 \$6,925**
 
 ---
 
@@ -121,3 +139,7 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 
 Let’s get that tech bag, brat 💅💻🧃
 Questions? Hit up the Brat-Cademy Dean 😎
+
+Let’s get that tech bag, brat 💅💻🧃
+Questions? Hit up the Brat-Cademy Dean 😎
+
