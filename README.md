@@ -1,6 +1,6 @@
 # Study Guides Repository
 
-Welcome to the Study Guides Repository! This repository contains a collection of study guides for various programming languages and frameworks. Each guide provides essential concepts, examples, and best practices to help you learn and reference key topics.
+Welcome to the Study Guides Repository! This repository contains a collection of study guides for various programming languages and frameworks. Each guide provides essential concepts, examples, and best practices to help you learn and reference key topics
 
 ## Available Study Guides
 
