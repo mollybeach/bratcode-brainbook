@@ -35,6 +35,7 @@ brew install postgresql mongodb redis
 brew install docker kubectl terraform
 brew install jq wget tree gh tmux fzf bat
 brew install nvm pyenv pipx
+brew install --cask anaconda
 ```
 
 ---
