@@ -40,7 +40,23 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 
 ---
 
-### 3. 🐍 Learn Data Structures and Algorithms with Python
+### 3. 🧱 Ethereum Blockchain Developer Bootcamp With Solidity (2025)
+
+**Platform:** [Udemy – Solidity Bootcamp](https://www.udemy.com/course/blockchain-developer/learn/lecture/33861892)
+**Skill Level:** Beginner to Intermediate
+**Duration:** Estimated \~20 hours
+**Payout:** **💵 \$500 upon completion**
+
+#### What You’ll Learn:
+
+* Master Ethereum development using Solidity
+* Build and deploy smart contracts using **Remix**, **Truffle**, **MetaMask**, and **Web3.js**
+* Explore blockchain fundamentals and dApp interaction
+* Complete labs and real-world contract deployments  
+
+---
+
+### 4. 🐍 Learn Data Structures and Algorithms with Python
 
 **Platform:** [Codecademy – DSA in Python](https://www.codecademy.com/learn/learn-data-structures-and-algorithms-with-python)
 **Skill Level:** Intermediate
@@ -52,11 +68,11 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 * Key data structures: lists, stacks, queues, trees, and graphs
 * Algorithms like sorting, searching, recursion
 * Apply these concepts in real-world Python code
-* Includes 6 practical projects and quizzes
+* Includes 6 practical projects and quizzes 
 
 ---
 
-### 4. ☁️ Intro to Cloud Computing
+### 5. ☁️ Intro to Cloud Computing
 
 **Platform:** [Codecademy – Cloud Computing Foundations](https://www.codecademy.com/learn/foundations-of-cloud-computing)
 **Skill Level:** Beginner
@@ -69,22 +85,6 @@ Welcome to **Brat-Code Academy**, a pay-to-learn program where every hour you co
 * Identify cloud deployment models (SaaS, IaaS, PaaS)
 * Evaluate major platforms (AWS, Azure, GCP)
 * Receive a Certificate of Completion
-
----
-
-### 5. 🧱 Ethereum Blockchain Developer Bootcamp With Solidity (2025)
-
-**Platform:** [Udemy – Solidity Bootcamp](https://www.udemy.com/course/blockchain-developer/learn/lecture/33861892)
-**Skill Level:** Beginner to Intermediate
-**Duration:** Estimated \~20 hours
-**Payout:** **💵 \$500 upon completion**
-
-#### What You’ll Learn:
-
-* Master Ethereum development using Solidity
-* Build and deploy smart contracts using **Remix**, **Truffle**, **MetaMask**, and **Web3.js**
-* Explore blockchain fundamentals and dApp interaction
-* Complete labs and real-world contract deployments
 
 ---
 
