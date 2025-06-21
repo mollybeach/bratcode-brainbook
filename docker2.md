@@ -398,4 +398,24 @@ Committing containers is useful for:
 - Backing up runtime-generated files/config
 - But for regular development, it’s better to mount volumes and rebuild from a Dockerfile for a clean, version-controlled workflow.
 
+```
+Error response from daemon: No such container: db6c0801658a
+mollybeach@Mollys-MacBook-Pro ~ %ssh fudgy-h100
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+ .============.
+ ||   __      ||    _                    _         _
+ ||   \_\     ||   | |    __ _ _ __ ___ | |__   __| | __ _
+ ||    \_\    ||   | |   / _` | '_ ` _ \| '_ \ / _` |/ _` |
+ ||   /_λ_\   ||   | |__| (_| | | | | | | |_) | (_| | (_| |
+ ||  /_/ \_\  ||   |_____\__,_|_| |_| |_|_.__/ \__,_|\__,_|
+  .============.                                  GPU CLOUD
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Last login: Sat Jun 21 07:18:11 2025 from 90.5.3.64
+ubuntu@192-222-54-82:~$ sudo docker restart neuronet-precompile2-new
+```
+
 
