@@ -361,7 +361,7 @@ REPOSITORY                      TAG     IMAGE ID       CREATED         SIZE
 blueberrybeach/neuronet-precompile2   v1      abcdef123456   2 minutes ago   1.4GB
 ```
 
-### 🚀 Optional: Push the Image to Docker Hub
+### ☁️ 2. (Optional) Push to Docker Hub Optional: Push the Image to Docker Hub
 If you're logged in to Docker Hub and want to back it up or share it:
 
 ```bash
@@ -371,6 +371,26 @@ docker login
 docker push blueberrybeach/neuronet-precompile2:v1
 ```
 
+🔍 1. View the New Image on the Remote Server
+You're on your MacBook now, but the new image lives on your remote GPU server, not your local machine.
+
+So SSH back in:
+
+```
+ssh fudgy-h100
+```
+
+Then run:
+
+```
+sudo docker images
+
+```
+You should see something like:
+```
+REPOSITORY                         TAG     IMAGE ID       CREATED              SIZE
+blueberrybeach/neuronet-precompile2   v1      d2819720dad9   About a minute ago   1.4GB
+```
 ### ⚠️ Reminder
 Committing containers is useful for:
 - Preserving edits before rebuilds
