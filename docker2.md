@@ -308,6 +308,15 @@ sudo docker restart neuronet-precompile2-new
 ```
 ---
 
+## 🧪 Look at the Code in Docker Container
+
+```bash
+sudo docker exec -it db6c0801658a /bin/bash
+cd /app/src/
+ls
+```
+
+
 ## 📸 Committing the Container to a Docker Image
 
 If you've made valuable changes inside a running container (via `docker exec`, Jupyter edits, etc.) and want to **preserve** them, you can commit the container to a new image.
