@@ -10,7 +10,7 @@ This guide explains how to:
 * Use JupyterLab in a Docker-based workflow
 * Find your Docker username, image name, and tag
 
----
+--- 
 
 ## 📁 What You’re Trying to Do
 
