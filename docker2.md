@@ -263,3 +263,110 @@ ls /app/src/blockchain
 ## ✅ Done!
 
 You’ve now copied, verified, and persisted changes inside a running Docker container. ✅
+
+
+# ✅ What You Ran on Remote (fudgy-h100)
+
+```bash
+sudo docker ps -a
+```
+
+This shows the most recently created container — in your case:
+
+CONTAINER ID   IMAGE                       ...   STATUS: Exited (0) 4 weeks ago
+NAMES: lcai-testnet-node-geth-1
+
+➡️ So nothing is running locally right now — that Geth container exited 4 weeks ago.
+
+
+That shows all containers (running or stopped) on the remote server, and here’s what you’ve got:
+
+| Container ID | Image                                 | Name                     | Status            |
+| ------------ | ------------------------------------- | ------------------------ | ----------------- |
+| db6c0801658a | neuronet-precompile2                  | neuronet-precompile2-new | ✅ Up 12 hours     |
+| e76bd8d52bbb | neuronet-consensus-precompile\:latest | neuronet-precompile2     | Exited 12 hrs ago |
+| 77061197fe23 | neuronet-consensus-precompile\:latest | neuronet-precompile      | Exited 13 hrs ago |
+
+
+# 🧠 What to Do Now
+To copy code into the running container, use the container ID:
+
+``` bash
+sudo docker cp /home/ubuntu/temp_blockchain/. db6c0801658a:/app/src/blockchain
+```
+
+Or by using the container name:
+
+``` bash
+sudo docker cp /home/ubuntu/temp_blockchain/. neuronet-precompile2-new:/app/src/blockchain
+```
+Then restart the container:
+``` bash
+sudo docker restart db6c0801658a
+# OR
+sudo docker restart neuronet-precompile2-new
+```
+---
+
+## 📸 Committing the Container to a Docker Image
+
+If you've made valuable changes inside a running container (via `docker exec`, Jupyter edits, etc.) and want to **preserve** them, you can commit the container to a new image.
+
+### ✅ Step 1: Find the Container ID or Name
+
+You already know the container name is:
+
+```bash
+neuronet-precompile2-new
+```
+
+Or its ID:
+
+```bash
+db6c0801658a
+```
+
+### ✅ Step 2: Commit the Container to a New Image
+Run this command to save the current state as a Docker image:
+
+```bash
+sudo docker commit db6c0801658a blueberrybeach/neuronet-precompile2:v1
+```
+
+Or using the container name:
+
+```bash
+sudo docker commit neuronet-precompile2-new blueberrybeach/neuronet-precompile2:v1
+```
+
+This creates a new image called blueberrybeach/neuronet-precompile2 with a tag v1.
+
+### ✅ Step 3: Verify the New Image Exists
+```bash
+docker images
+```
+You should see something like:
+
+```bash
+REPOSITORY                      TAG     IMAGE ID       CREATED         SIZE
+blueberrybeach/neuronet-precompile2   v1      abcdef123456   2 minutes ago   1.4GB
+```
+
+### 🚀 Optional: Push the Image to Docker Hub
+If you're logged in to Docker Hub and want to back it up or share it:
+
+```bash
+docker login
+```
+```bash
+docker push blueberrybeach/neuronet-precompile2:v1
+```
+
+### ⚠️ Reminder
+Committing containers is useful for:
+- Preserving edits before rebuilds
+- Creating reproducible snapshots of the container state
+- Backing up runtime-generated files/config
+- But for regular development, it’s better to mount volumes and rebuild from a Dockerfile for a clean, version-controlled workflow.
+
+
