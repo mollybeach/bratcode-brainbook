@@ -418,4 +418,10 @@ Last login: Sat Jun 21 07:18:11 2025 from 90.5.3.64
 ubuntu@192-222-54-82:~$ sudo docker restart neuronet-precompile2-new
 ```
 
+# View the Live Logs on Jupyter Notebook Terminal
+
+```
+sudo docker logs -f neuronet-precompile2-new
+```
+
 
