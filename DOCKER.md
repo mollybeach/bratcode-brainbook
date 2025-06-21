@@ -265,12 +265,12 @@ Use `nano` for quick edits, or `vim` if you're comfortable with advanced termina
 
 ---
 
-## 🧪 Verify Changes
+## 🧪View Edit Code on Docker Verify Changes
 
 Once inside the container:
 
 ```bash
-sudo docker exec -it 77061197fe23 /bin/bash
+sudo docker exec -it db6c0801658a /bin/bash
 cd /app/src/blockchain
 ls
 ```
@@ -278,7 +278,10 @@ ls
 Ensure your latest files are present.
 
 ---
-
+```
+ubuntu@192-222-54-82:~$ sudo docker exec -it db6c0801658a /bin/bash
+root@db6c0801658a:/app# 
+```
 ## ✅ Done!
 
 This setup ensures you can edit locally, deploy remotely, and have your changes live inside the running Docker environment.
