@@ -32,6 +32,32 @@ docker build -f docker/jupyter.Dockerfile -t neuronet-lab .
 docker run --gpus all -p 8888:8888 -v $(pwd):/app neuronet-lab
 ```
 
+### c. Push Image to Docker Hub
+
+1. Log in to Docker Hub:
+
+```bash
+docker login
+```
+
+2. Tag the image with your Docker Hub username:
+
+```bash
+docker tag neuronet-lab <your-dockerhub-username>/neuronet-lab:latest
+```
+
+3. Push to Docker Hub:
+
+```bash
+docker push <your-dockerhub-username>/neuronet-lab:latest
+```
+
+4. To pull it on another machine:
+
+```bash
+docker pull <your-dockerhub-username>/neuronet-lab:latest
+```
+
 ---
 
 ## 🖥️ 3. Lambda Labs H200 Setup with JupyterLab
