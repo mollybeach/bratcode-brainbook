@@ -1,7 +1,3 @@
-//path: README.md
-
-# //path: README.md
-
 # Deploy & Reload **Neuronet Consensus** on the H200 GPU Server
 
 This guide walks you through syncing code, SSH‑ing in, and keeping the API running in a persistent **tmux** session.
