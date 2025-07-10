@@ -18,8 +18,8 @@ myproject/
 
 The HTML file is the backbone of the webpage. It provides the structure and references external files such as CSS and JavaScript.
 
-``` html
-<!-- index.html --> <-- This is how you make a comment in HTML using the arrows --> 
+```html
+<!-- index.html --> <!-- This is how you make a comment in HTML using the arrows --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,12 +61,15 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
 
 p {
     font-size: 18px;
-    color: darkgray;
+    color: #696969;
     line-height: 1.5;
+    margin: 10px 0;
 }
 
 button {
@@ -74,6 +77,9 @@ button {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
 }
 
 .styled-button {
@@ -88,6 +94,14 @@ button {
 .main-heading {
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    min-height: 20px;
 }
 ```
 
@@ -106,10 +120,23 @@ button {
 
 The JavaScript file adds interactivity to the webpage.
 
-```
+```javascript
 // ./script.js
 function changeText() {
-    document.getElementById("message").innerText = "You clicked the button!";
+    const messages = [
+        "You clicked the button!",
+        "Great job!",
+        "Keep clicking!",
+        "Awesome!",
+        "You're doing great!"
+    ];
+    
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("message").innerText = randomMessage;
+    
+    // Add a fun color change effect
+    const messageElement = document.getElementById("message");
+    messageElement.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 ```
 
