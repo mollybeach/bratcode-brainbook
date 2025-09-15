@@ -1,6 +1,6 @@
 # A100 Nginx Setup Guide for chat.molly.ai
 
-This comprehensive guide walks you through setting up nginx on an A100 GPU server to serve your FastAPI application with SSL certificates and proper DNS configuration.
+This comprehensive guide walks you through setting up nginx on an A100 GPU server to serve your FastAPI application with SSL certificates and proper DNS configuration
 
 ## 🎯 Overview
 
