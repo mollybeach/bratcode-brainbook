@@ -2,22 +2,58 @@
 
 Welcome to the Study Guides Repository! This repository contains a collection of study guides for various programming languages and frameworks. Each guide provides essential concepts, examples, and best practices to help you learn and reference key topics.
 
-## Available Study Guides
+# 📚 Developer Study Guides & Notes
 
-- [C++ Study Guide](C++.md)
-- [CSS Study Guide](CSS.md)
-- [Git Study Guide](GIT.md)
-- [HTML Study Guide](HTML.md)
-- [Java Study Guide](JAVA.md)
-- [JavaScript Study Guide](JAVASCRIPT.md)
-- [Next.js Study Guide](NEXTJS.md)
-- [NPM Study Guide](NPM.md)
-- [Python Study Guide](PYTHON.md)
-- [React Study Guide](REACT.md)
-- [SQL Study Guide](SQL.md)
-- [Solidity Study Guide](SOLIDITY.md)
-- [Tailwind CSS Study Guide](TAILWIND.md)
-- [TypeScript Study Guide](TS.md)
+This repository organizes study guides, setup instructions, and reference notes by category.  
+Use the links below to quickly navigate to each topic.
+
+---
+
+## 🖥️ New Computer Setup
+- [MacBook Developer Guide](./NEWCOMPUTERDEVSETUP/newMacBookSetUpDeveloperGuide.md)
+- [Windows Developer Guide](./NEWCOMPUTERDEVSETUP/setUpNewWindowsComputer.md)
+
+## ⛓️ Blockchain
+- [Rust Smart Contracts](./blockchain/RUST_SMARTCONTRACTS.md)
+
+## 🗄️ Databases
+- [GraphQL](./databases/GRAPHQL.md)
+- [EdgeQL](./languages/EDGEQL.md)  
+- [Database Schema (SQL)](./databases/database.sql)
+
+## 🧩 Frameworks
+- [Next.js](./frameworks/NEXTJS.md)
+- [React](./frameworks/REACT.md)
+
+## 🏗️ Infrastructure & Tools
+- [AWS](./infrastructure/AWS.md)
+- [Docker](./infrastructure/DOCKER.md)
+- [Docker (alt notes)](./infrastructure/Docker.md)
+- [Docker + Jupyter + Lambda Setup](./infrastructure/DockerJupyterLambdaSetup.md)
+- [Firebase](./infrastructure/FIREBASE.md)
+- [Jupyter Notebook](./infrastructure/JUPYTERNOTEBOOK.md)
+- [NGINX](./infrastructure/NGINX.md)
+- [Tmux](./infrastructure/TMUX.md)
+- [Vercel](./infrastructure/VERCEL.md)
+
+## 💻 Programming Languages
+- [C++](./languages/C++.md)
+- [CSS](./languages/CSS.md)
+- [EdgeQL](./languages/EDGEQL.md)
+- [Go](./languages/GOLANG.md)
+- [HTML](./languages/HTML.md)
+- [Java](./languages/JAVA.md)
+- [JavaScript](./languages/JAVASCRIPT.md)
+- [Python](./languages/PYTHON.md)
+- [Rust](./languages/RUST.md)
+- [Solidity](./languages/SOLIDITY.md)
+- [SQL](./languages/SQL.md)
+- [Tailwind CSS](./languages/TAILWIND.md)
+- [TypeScript](./languages/TYPESCRIPT.md)
+
+## 📦 Package Managers
+- [NPM](./package-managers/NPM.md)
+
 
 Feel free to explore each guide and enhance your knowledge in these areas!
 
