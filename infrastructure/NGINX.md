@@ -1,11 +1,11 @@
-# A100 Nginx Setup Guide for chat.molly.ai
+# A100 Nginx Setup Guide for chat.lightchain.ai
 
 This comprehensive guide walks you through setting up nginx on an A100 GPU server to serve your FastAPI application with SSL certificates and proper DNS configuration
 
 ## 🎯 Overview
 
 This setup creates a complete production-ready deployment:
-- **Domain**: `chat.molly.ai`
+- **Domain**: `chat.lightchain.ai`
 - **Server**: A100 GPU server (`150.136.41.118`)
 - **API**: FastAPI running on port 8000
 - **SSL**: Let's Encrypt certificate with auto-renewal
@@ -16,7 +16,7 @@ This setup creates a complete production-ready deployment:
 ### Required Access
 - SSH access to A100 server (`150.136.41.118`)
 - Cloudflare DNS management access
-- Domain ownership of `molly.ai`
+- Domain ownership of `lightchain.ai`
 
 ### Required Tools
 - SSH key configured for A100 server
@@ -62,7 +62,7 @@ ssh a100
 
 #### 2.1 Access Cloudflare Dashboard
 1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Select your `molly.ai` domain
+2. Select your `lightchain.ai` domain
 3. Go to **DNS > Records**
 
 #### 2.2 Update A Record
@@ -97,7 +97,7 @@ ssh a100 "sudo ./setup-a100-nginx-fixed.sh"
 
 Expected output:
 ```
-🚀 Setting up nginx for chat.molly.ai on A100...
+🚀 Setting up nginx for chat.lightchain.ai on A100...
 📦 Installing nginx...
 🔒 Installing certbot for SSL certificates...
 📝 Creating nginx configuration...
@@ -133,10 +133,10 @@ Wait 5-10 minutes after DNS changes, then test:
 
 ```bash
 # Test domain resolution
-nslookup chat.molly.ai
+nslookup chat.lightchain.ai
 
 # Test HTTP connection
-curl -I http://chat.molly.ai
+curl -I http://chat.lightchain.ai
 ```
 
 #### 5.2 Test API Endpoint
@@ -144,7 +144,7 @@ curl -I http://chat.molly.ai
 # Test chat endpoint
 curl -X POST -H "Content-Type: application/json" \
   -d '{"message": "Hello A100!", "user_address": "0x123"}' \
-  http://chat.molly.ai/api/chat/send
+  http://chat.lightchain.ai/api/chat/send
 ```
 
 Expected response:
@@ -166,17 +166,17 @@ Expected response:
 #### 6.1 Get Let's Encrypt Certificate
 ```bash
 ssh a100
-sudo certbot --nginx -d chat.molly.ai --non-interactive --agree-tos --email blueberry@molly.ai
+sudo certbot --nginx -d chat.lightchain.ai --non-interactive --agree-tos --email blueberry@lightchain.ai
 ```
 
 Expected output:
 ```
 Successfully received certificate.
-Certificate is saved at: /etc/letsencrypt/live/chat.molly.ai/fullchain.pem
-Key is saved at:         /etc/letsencrypt/live/chat.molly.ai/privkey.pem
+Certificate is saved at: /etc/letsencrypt/live/chat.lightchain.ai/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/chat.lightchain.ai/privkey.pem
 This certificate expires on 2025-12-14.
-Successfully deployed certificate for chat.molly.ai
-Congratulations! You have successfully enabled HTTPS on https://chat.molly.ai
+Successfully deployed certificate for chat.lightchain.ai
+Congratulations! You have successfully enabled HTTPS on https://chat.lightchain.ai
 ```
 
 #### 6.2 Test HTTPS Connection
@@ -184,7 +184,7 @@ Congratulations! You have successfully enabled HTTPS on https://chat.molly.ai
 # Test HTTPS endpoint
 curl -X POST -H "Content-Type: application/json" \
   -d '{"message": "Hello HTTPS A100!", "user_address": "0x123"}' \
-  https://chat.molly.ai/api/chat/send
+  https://chat.lightchain.ai/api/chat/send
 ```
 
 ## 🔧 Management Commands
@@ -219,8 +219,8 @@ ssh a100 "sudo nginx -t"
 ssh a100 "sudo systemctl reload nginx"
 
 # View logs
-ssh a100 "sudo tail -f /var/log/nginx/chat.molly.ai.access.log"
-ssh a100 "sudo tail -f /var/log/nginx/chat.molly.ai.error.log"
+ssh a100 "sudo tail -f /var/log/nginx/chat.lightchain.ai.access.log"
+ssh a100 "sudo tail -f /var/log/nginx/chat.lightchain.ai.error.log"
 ```
 
 ### SSL Certificate Management
@@ -244,8 +244,8 @@ ssh a100 "sudo certbot renew --dry-run"
 **Solution**: 
 ```bash
 # Check DNS propagation
-dig chat.molly.ai
-nslookup chat.molly.ai
+dig chat.lightchain.ai
+nslookup chat.lightchain.ai
 
 # Clear local DNS cache (macOS)
 sudo dscacheutil -flushcache
@@ -285,17 +285,17 @@ After completing all steps, verify your setup:
 
 ### 1. DNS Resolution
 ```bash
-nslookup chat.molly.ai
+nslookup chat.lightchain.ai
 # Should return: 150.136.41.118
 ```
 
 ### 2. HTTP/HTTPS Access
 ```bash
 # HTTP (should redirect to HTTPS)
-curl -I http://chat.molly.ai
+curl -I http://chat.lightchain.ai
 
 # HTTPS
-curl -I https://chat.molly.ai
+curl -I https://chat.lightchain.ai
 ```
 
 ### 3. API Functionality
@@ -303,14 +303,14 @@ curl -I https://chat.molly.ai
 # Test chat endpoint
 curl -X POST -H "Content-Type: application/json" \
   -d '{"message": "Final test!", "user_address": "0x123"}' \
-  https://chat.molly.ai/api/chat/send
+  https://chat.lightchain.ai/api/chat/send
 ```
 
 ## ✅ Success Criteria
 
 Your setup is successful when:
 
-- ✅ `chat.molly.ai` resolves to `150.136.41.118`
+- ✅ `chat.lightchain.ai` resolves to `150.136.41.118`
 - ✅ HTTPS certificate is valid and trusted
 - ✅ API endpoints respond correctly
 - ✅ CORS headers are present
@@ -321,6 +321,6 @@ Your setup is successful when:
 
 **Created**: September 15, 2025  
 **Server**: A100 GPU (150.136.41.118)  
-**Domain**: chat.molly.ai  
-**SSL**: Let's Encrypt (blueberry@molly.ai)  
+**Domain**: chat.lightchain.ai  
+**SSL**: Let's Encrypt (blueberry@lightchain.ai)  
 **Status**: ✅ Production Ready
