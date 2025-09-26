@@ -17,7 +17,7 @@ Use the links below to quickly navigate to each topic.
 - [Rust Smart Contracts](./blockchain/RUST_SMARTCONTRACTS.md)
   
 ## Configuration
-- [Configuration/Makefile](#configurationmakefile)
+- [MAKEFILE](./configuration/MAKEFILE)
 
 ## 🗄️ Databases
 - [GraphQL](./databases/GRAPHQL.md)
