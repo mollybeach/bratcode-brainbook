@@ -40,6 +40,10 @@ Use the links below to quickly navigate to each topic.
 - [Vercel](./infrastructure/VERCEL.md)
 - [CloudflareDNS](./CloudflareDNS/VERCEL.md)
 
+## Git
+- [git](#git)
+- [.gitignore](#gitignore)
+- [GIT.md](#gitmd)
 
 ## 💻 Programming Languages
 - [C++](./languages/C++.md)
