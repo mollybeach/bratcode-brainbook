@@ -41,7 +41,6 @@ Use the links below to quickly navigate to each topic.
 - [CloudflareDNS](./CloudflareDNS/VERCEL.md)
 
 ## Git
-- [git](#git)
 - [.gitignore](#gitignore)
 - [GIT.md](#gitmd)
 
