@@ -35,6 +35,8 @@ Use the links below to quickly navigate to each topic.
 - [NGINX](./infrastructure/NGINX.md)
 - [Tmux](./infrastructure/TMUX.md)
 - [Vercel](./infrastructure/VERCEL.md)
+- [CloudflareDNS](./CloudflareDNS/VERCEL.md)
+
 
 ## 💻 Programming Languages
 - [C++](./languages/C++.md)
